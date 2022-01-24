@@ -1,8 +1,7 @@
-from turtle import title
 from app import app
 import urllib.request, json
 
-from app.movie_test import Movie
+# from app.movie_test import Movie
 from .models import movie
 
 Movie = movie.Movie
@@ -28,7 +27,7 @@ def get_movies(category):
     if get_movies_response['results']:
       movie_results_list = get_movies_response['results']
       movie_results = process_results(movie_results_list)
-  
+  print(movie_results)
   return movie_results
 
 
